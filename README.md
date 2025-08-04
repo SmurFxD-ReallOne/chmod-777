@@ -92,14 +92,6 @@ Octal representation: 775
 SUCCESS: Permissions set correctly to 775 (rwxrwxr-x)
 ```
 
-## Course Context
-
-This implementation demonstrates mastery of Linux systems concepts including:
-- **File permissions and security**
-- **Command line interface (CLI)**
-- **Filesystem operations**
-- **System administration commands**
-
 ## Learning Objectives
 
 This project successfully demonstrates:
