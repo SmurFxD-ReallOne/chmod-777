@@ -5,7 +5,7 @@
 - [What This Implementation Covers](#what-this-implementation-covers)
 - [Files Included](#files-included)
 - [How to Run](#how-to-run)
-- [Course Context](#course-context)
+- [Results](#results)
 - [Learning Objectives](#learning-objectives)
 - [Security Note](#security-note)
 - [Reference](#reference)
@@ -91,6 +91,20 @@ Octal representation: 775
 
 SUCCESS: Permissions set correctly to 775 (rwxrwxr-x)
 ```
+
+## Results
+
+### Actual Implementation Results
+
+![Implementation Results](image.png)
+
+The image above shows the successful execution of our file permissions implementation, demonstrating:
+
+- **Complete flowchart display** explaining the permission system
+- **Successful file creation** and permission modification
+- **Proper chmod command execution** achieving target permissions
+- **Verification of results** showing `775` (rwxrwxr-x) permissions
+- **Clean, professional output** with clear step-by-step demonstration
 
 ## Learning Objectives
 
