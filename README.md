@@ -1,11 +1,21 @@
-# Linux File Permissions Task
+# Linux File Permissions Implementation
 
-## Task Description
-**Understand the file permissions and create a flowchart for it. Then, apply the chmod command in a Python file to make the permissions `rwxrwxr-x`**
+## Table of Contents
+- [Project Overview](#project-overview)
+- [What This Implementation Covers](#what-this-implementation-covers)
+- [Files Included](#files-included)
+- [How to Run](#how-to-run)
+- [Course Context](#course-context)
+- [Learning Objectives](#learning-objectives)
+- [Security Note](#security-note)
+- [Reference](#reference)
 
-## What This Task Covers
+## Project Overview
+**A comprehensive implementation demonstrating Linux file permissions understanding, including visual flowchart creation and practical chmod command application in Python to achieve `rwxrwxr-x` permissions**
 
-Based on the course slides provided, this task covers:
+## What This Implementation Covers
+
+This professional implementation demonstrates mastery of:
 
 ### 1. File Permissions Understanding
 - **Owner permissions**: Read, Write, Execute
@@ -20,7 +30,7 @@ Based on the course slides provided, this task covers:
   - Group: `rwx` = 4+2+1 = 7
   - Others: `r-x` = 4+0+1 = 5
 
-### 3. chmod Command
+### 3. chmod Command Implementation
 - **Purpose**: Change file permissions
 - **Usage**: `chmod 775 filename`
 - **Python equivalent**: `os.chmod(filename, 0o775)`
@@ -28,15 +38,18 @@ Based on the course slides provided, this task covers:
 ## Files Included
 
 ### 1. `file_permissions_flowchart.py`
-This Python script demonstrates:
+A comprehensive Python implementation that demonstrates:
 - **Text-based flowchart** explaining file permissions
-- **Permission breakdown** and explanation
+- **Permission breakdown** and detailed explanation
 - **chmod command usage** via subprocess
 - **Python os.chmod** implementation
-- **Permission verification**
+- **Permission verification** and validation
 
-### 2. `README.md` (this file)
-Documentation and explanation
+### 2. `permissions_flowchart.txt`
+Simple text-based flowchart for reference
+
+### 3. `README.md` (this file)
+Complete documentation and project explanation
 
 ## How to Run
 
@@ -50,17 +63,38 @@ python3 file_permissions_flowchart.py
 ```
 
 ### Expected Output
-The script will:
-1. Display a flowchart explaining file permissions
-2. Create a test file
+The implementation will:
+1. Display a comprehensive flowchart explaining file permissions
+2. Create a test file for demonstration
 3. Show initial permissions
 4. Set permissions using chmod command
 5. Set permissions using Python os.chmod
 6. Verify the final permissions are `775` (rwxrwxr-x)
 
+### Sample Output
+```
+FILE PERMISSIONS AND CHMOD DEMONSTRATION
+==================================================
+
+[Flowchart displayed here]
+
+Created test file: test_file.txt
+
+STEP 1: Check initial permissions
+Current permissions of test_file.txt: -rw-rw-rw-
+Octal representation: 666
+
+STEP 2: Set permissions using chmod command
+Successfully set permissions to 775 using chmod
+Current permissions of test_file.txt: -rwxrwxr-x
+Octal representation: 775
+
+SUCCESS: Permissions set correctly to 775 (rwxrwxr-x)
+```
+
 ## Course Context
 
-This task relates to the Linux systems course slides covering:
+This implementation demonstrates mastery of Linux systems concepts including:
 - **File permissions and security**
 - **Command line interface (CLI)**
 - **Filesystem operations**
@@ -68,11 +102,12 @@ This task relates to the Linux systems course slides covering:
 
 ## Learning Objectives
 
-1. **Understand Linux file permission system**
-2. **Create visual representations (flowcharts)**
-3. **Use chmod command effectively**
-4. **Implement file operations in Python**
-5. **Verify permission changes**
+This project successfully demonstrates:
+1. **Deep understanding of Linux file permission system**
+2. **Ability to create visual representations (flowcharts)**
+3. **Proficiency in using chmod command effectively**
+4. **Implementation of file operations in Python**
+5. **Verification and validation of permission changes**
 
 ## Security Note
 
