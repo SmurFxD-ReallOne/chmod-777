@@ -1,0 +1,63 @@
+FILE PERMISSIONS FLOWCHART
+==========================
+
+START
+  │
+  ▼
+┌─────────────────────────────────────┐
+│         FILE PERMISSIONS            │
+│         (rwxrwxr-x)                │
+└─────────────────────────────────────┘
+  │
+  ▼
+┌─────────────────────────────────────┐
+│      THREE PERMISSION GROUPS       │
+└─────────────────────────────────────┘
+  │
+  ▼
+┌─────────────┬─────────────┬─────────────┐
+│   OWNER     │   GROUP     │   OTHERS    │
+│   (User)    │  (Group)    │ (Everyone)  │
+└─────────────┴─────────────┴─────────────┘
+  │             │             │
+  ▼             ▼             ▼
+┌─────────────┐ ┌─────────────┐ ┌─────────────┐
+│    rwx      │ │    rwx      │ │    r-x      │
+│ Read/Write  │ │ Read/Write  │ │ Read/Execute│
+│ Execute     │ │ Execute     │ │ (No Write)  │
+└─────────────┘ └─────────────┘ └─────────────┘
+  │             │             │
+  ▼             ▼             ▼
+┌─────────────┐ ┌─────────────┐ ┌─────────────┐
+│      7      │ │      7      │ │      5      │
+│   (4+2+1)   │ │   (4+2+1)   │ │   (4+0+1)   │
+└─────────────┘ └─────────────┘ └─────────────┘
+  │             │             │
+  └─────────────┼─────────────┘
+                ▼
+┌─────────────────────────────────────┐
+│         FINAL RESULT: 775           │
+│      chmod 775 filename             │
+└─────────────────────────────────────┘
+                │
+                ▼
+              END
+
+PERMISSION BREAKDOWN:
+====================
+
+r = Read permission (4)
+w = Write permission (2) 
+x = Execute permission (1)
+
+Owner (rwx):   Read + Write + Execute = 4+2+1 = 7
+Group (rwx):   Read + Write + Execute = 4+2+1 = 7
+Others (r-x):  Read + Execute (no write) = 4+0+1 = 5
+
+Final Permission: 775 (rwxrwxr-x)
+
+COMMANDS:
+=========
+chmod 775 filename
+chmod rwxrwxr-x filename
+os.chmod(filename, 0o775)  # Python 
