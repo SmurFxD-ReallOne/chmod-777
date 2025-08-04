@@ -109,5 +109,9 @@ The permission `775` (rwxrwxr-x) is commonly used for:
 
 **Remember**: Never use `chmod 777` (rwxrwxrwx) as it's a security risk!
 
+![Security Warning Meme](image.png)
+
+*When someone says "chmod 777 fixed it" - This meme perfectly captures why using `chmod 777` is a terrible security practice!*
+
 ## Reference
 - YouTube Video: https://youtu.be/LnKoncbQBsM?si=IfV4m31fDSf5Ctw 
